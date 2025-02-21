@@ -1,0 +1,219 @@
+/* General Styles */
+body { 
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  /* Auth Buttons */
+  .auth-buttons {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .auth-buttons button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-buttons button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Main content */
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  section h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Carousel Styles */
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 250px;
+    text-align: center;
+    scroll-snap-align: start;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .carousel-item button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  
+  .carousel-item button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .modal-content form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .modal-content form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .modal-content form button:hover {
+    background-color: #45a049;
+  }
+  
+  .modal-content .security {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .modal-content .security button {
+    margin: 5px;
+    padding: 8px 16px;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  .modal-content .security button:hover {
+    background-color: #007bb5;
+  }
+  
+  /* Close button */
+  .close {
+    color: #aaa;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+  }
+  

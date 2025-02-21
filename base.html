@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ticket Booking Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#music">Music Concerts</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#bus">Bus Tickets</a></li>
+                <li><a href="#plane">Plane Tickets</a></li>
+                <li><a href="#train">Train Tickets</a></li>
+                <li><a href="#outdoor">Outdoor Events</a></li>
+            </ul>
+            <div class="auth-buttons">
+        <button id="loginBtn">Login</button>
+        <button id="signupBtn">Sign Up</button>
+      </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Music Concerts Section -->
+        <section id="music">
+            <h2>Music Concerts</h2>
+            <div class="carousel" id="musicCarousel">
+                <div class="carousel-item">
+                    <img src="https://blog.uber-cdn.com/cdn-cgi/image/width=960,quality=80,onerror=redirect,format=auto/wp-content/uploads/sites/213/2016/04/Uber_Chandigarh_Arijit-Singh-Live_Blog-Header_960x540.png" alt="Artist 1 Concert">
+                    <button onclick="bookTicket('Arijith Singh Concert')">Book Ticket</button>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbr1lTRIlWT80yOodXC0kVCfBYOa4CuHy7zw&s" alt="Artist 2 Concert">
+                    <button onclick="bookTicket('Anirudh Concert')">Book Ticket</button>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202411/diljit-dosanjh-concert-242157848-3x4.png?VersionId=0aKlg91MNeuFPKz4.V3CAx3o5F017IIK" alt="Artist 3 Concert">
+                    <button onclick="bookTicket('Diljith Concert')">Book Ticket</button>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://media.assettype.com/metrovaartha-en%2F2023-05%2F3b79c4f6-f27b-4dde-bba9-da3b2b84f858%2Far.jpg" alt="Artist 4 Concert">
+                    <button onclick="bookTicket('AR Rahmaan Concert')">Book Ticket</button>
+                </div>
+                <!-- Add more artists here -->
+            </div>
+        </section>
+
+        <!-- Movies Section -->
+        <section id="movies">
+            <h2>Movies</h2>
+            <div class="carousel" id="moviesCarousel">
+                <div class="carousel-item">
+                    <img src="https://diyatvusa.com/wp-content/uploads/2022/12/RRRposter.jpg" alt="Movie 1">
+                    <button onclick="bookTicket('RRR Movie')">Book Ticket</button>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZgarY79EPQu_BBe86NdqmVxRhgH0N6AgLEA&s" alt="Movie 2">
+                    <button onclick="bookTicket(' Interstellar Movie')">Book Ticket</button>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/75/Chhaava_film_poster.jpg" alt="Movie 3">
+                    <button onclick="bookTicket('chaava Movie')">Book Ticket</button>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiLoGGY46WtEjYhR5SKItZCE1g6a0d7_YF7w&s" alt="Movie 4">
+                    <button onclick="bookTicket(' kalki Movie')">Book Ticket</button>
+                </div>
+                <!-- Add more movies here -->
+            </div>
+        </section>
+
+        <!-- Bus Tickets Section -->
+        <section id="bus">
+            <h2>Bus Tickets</h2>
+            <div class="carousel" id="busCarousel">
+                <div class="carousel-item">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/12/369790172/RP/OR/ZR/200122440/bus-tickets-booking-service-250x250.png" alt="Bus 1">
+                    <button onclick="bookTicket('Train ticket')">Book Ticket</button>
+                </div>
+                <!-- Add more bus options here -->
+            </div>
+        </section>
+
+        <!-- Plane Tickets Section -->
+        <section id="plane">
+            <h2>Plane Tickets</h2>
+            <div class="carousel" id="planeCarousel">
+                <div class="carousel-item">
+                    <img src="data:image/jpeg;base64,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" alt="Plane 1">
+                    <button onclick="bookTicket('plane ticket')">Book Ticket</button>
+                </div>
+                <!-- Add more plane options here -->
+            </div>
+        </section>
+
+        <!-- Train Tickets Section -->
+        <section id="train">
+            <h2>Train Tickets</h2>
+            <div class="carousel" id="trainCarousel">
+                <div class="carousel-item">
+                    <img src="https://images.emtcontent.com/bus-img/Train_OGTag.png" alt="Train 1">
+                    <button onclick="bookTicket('Train ticket')">Book Ticket</button>
+                </div>
+                </div>
+                <!-- Add more train options here -->
+            </div>
+        </section>
+
+        <!-- Outdoor Events Section -->
+        <section id="outdoor">
+            <h2>Outdoor Events</h2>
+            <div class="carousel" id="outdoorCarousel">
+                <div class="carousel-item">
+                    <img src="https://www.revv.co.in/blogs/wp-content/uploads/2020/03/holi-parties-in-hyderabad.jpg" alt="Outdoor Event 1">
+                    <button onclick="bookTicket('Holi Event')">Book Ticket</button>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe2XtQUGrNUVmugsxlKVOx1uZAD6jaMvBV-A&s" alt="Outdoor Event 2">
+                    <button onclick="bookTicket('Dandiya night')">Book Ticket</button>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/et00063786-vdyrlzxywh-landscape.jpg" alt="Outdoor Event 3">
+                    <button onclick="bookTicket('Wonderla ticket')">Book Ticket</button>
+                </div>
+                
+                <!-- Add more outdoor events here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ticket Booking Website</p>
+    </footer>
+    <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeLogin">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+      <div class="security">
+        <p>For enhanced security, please verify using OTP or Face Recognition.</p>
+        <button id="otpLoginBtn">Login via OTP</button>
+        <button id="faceLoginBtn">Login via Face Recognition</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeSignup">&times;</span>
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+      <div class="security">
+        <p>Secure your account with OTP verification and Face Recognition setup.</p>
+        <button id="otpSignupBtn">Verify via OTP</button>
+        <button id="faceSignupBtn">Setup Face Recognition</button>
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
